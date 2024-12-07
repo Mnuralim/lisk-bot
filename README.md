@@ -15,7 +15,7 @@ Worth : $18,5M
 
 » Complete available tasks & Claim points.
 
-» Bridge : https://relay.link/bridge/lisk(Recomend Base to LISK)
+» Bridge : https://relay.link/bridge/lisk  (Recomend Base to LISK)
 
 » Do swap daily 
 
