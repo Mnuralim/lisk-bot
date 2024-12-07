@@ -45,17 +45,6 @@ check_and_install_bun() {
   fi
 }
 
-check_and_install_screen() {
-  echo "Checking if Screen is installed..."
-  if ! command -v screen &>/dev/null; then
-    echo "Screen is not installed. Installing Screen..."
-    sudo apt update && sudo apt install -y screen
-    echo "Screen installed successfully."
-  else
-    echo "Screen is already installed."
-  fi
-}
-
 setup_env_file() {
   echo "Setup .env file..."
 
@@ -80,15 +69,9 @@ install_dependencies() {
   bun install
 }
 
-run_project_in_screen() {
-  echo "Checking if a screen session 'lisk-bot' is already running..."
-  if screen -list | grep -q "lisk-bot"; then
-    echo "Screen session 'lisk-bot' is already running. Attaching to the session..."
-    screen -r lisk-bot
-  else
-    echo "Starting the project in a new screen session..."
-    exec screen -S lisk-bot bash -c "bun run start"
-  fi
+run_project() {
+  echo "Starting the project..."
+  bun run start
 }
 
 setup_timezone
@@ -98,8 +81,6 @@ check_git
 check_curl
 
 check_and_install_bun
-
-check_and_install_screen
 
 repo_name=$(basename "$REPO_URL" .git)
 
@@ -119,4 +100,4 @@ setup_env_file
 
 install_dependencies
 
-run_project_in_screen
+run_project
