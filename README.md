@@ -8,11 +8,17 @@ Worth : $18,5M
 
 ## Step 1: Register 
 » Join : https://portal.lisk.com/airdrop
+
 » Complete Guild 
+
 » Reff : IEUuMs
+
 » Complete available tasks & Claim points.
+
 » Bridge : https://relay.link/bridge/lisk(Recomend Base to LISK)
-» lakukan swap daily 
+
+» Do swap daily 
+
 » Source : https://lisk.com/blog/posts/lisk-lsk-airdrop/
 
 
@@ -24,6 +30,7 @@ chmod +x install-lisk.sh
 ./install-lisk.sh
 ```
 » Input Private key without "0x"
+
 » Multi accounts : pk1,pk2,etc..
 
 
@@ -43,7 +50,7 @@ git clone https://github.com/Mnuralim/lisk-bot.git && cd lisk-bot
 touch .env
 ```
 ```
-note pad .env
+notepad .env
 ```
 
 Fill .env file with format 
