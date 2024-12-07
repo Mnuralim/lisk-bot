@@ -82,8 +82,9 @@ install_dependencies() {
 
 run_project_in_screen() {
   echo "Starting the project in a new screen session..."
-  screen -S lisk-bot -d -m bash -c "bun run start"
-  echo "Project started in screen session 'lisk-bot'. Use 'screen -r lisk-bot' to attach to the session."
+  screen -S lisk-bot
+  bun run start
+  echo "Project started in screen session 'lisk-bot'.For close use CTRL+A+D and Use 'screen -r lisk-bot' to attach to the session."
 }
 
 setup_timezone
