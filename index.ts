@@ -324,8 +324,8 @@ async function wrapUnwrapLoop(config: AppConfig): Promise<void> {
       console.log(kleur.blue(`\nAll transactions completed for today.`));
     }
   } else if (config.mode === "manual") {
-    await dailyCheckin(config);
     await runTransactions(web3, wethContract, accounts, config);
+    await dailyCheckin(config);
   } else {
     console.error(
       kleur.red(
