@@ -319,9 +319,12 @@ async function wrapUnwrapLoop(config: AppConfig): Promise<void> {
       await delay(delayUntilNextRun);
 
       await runTransactions(web3, wethContract, accounts, config);
+      await dailyCheckin(config);
+      
       console.log(kleur.blue(`\nAll transactions completed for today.`));
     }
   } else if (config.mode === "manual") {
+    await dailyCheckin(config);
     await runTransactions(web3, wethContract, accounts, config);
   } else {
     console.error(
@@ -405,7 +408,6 @@ async function main() {
 
     await wrapUnwrapLoop(config);
 
-    await dailyCheckin(config);
   } catch (error) {
     console.error(kleur.red("Fatal error: "), error);
   }
