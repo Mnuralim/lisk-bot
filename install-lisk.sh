@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_URL="https://github.com/username/repository.git"
+REPO_URL="https://github.com/Mnuralim/lisk-bot.git"
 
 setup_timezone() {
   echo "Setting timezone to Asia/Jakarta..."
