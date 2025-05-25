@@ -52,7 +52,6 @@ touch .env
 ```
 ```
 notepad .env
->>>>>>> c06234c00b6bfbc6e3bf233119062ec4059445c2
 ```
 
 Fill .env file with format 
