@@ -73,9 +73,9 @@ function loadConfiguration(privateKeys: string[]): AppConfig {
   );
 
   const config: AppConfig = {
-    rpc: "https://rpc.api.lisk.com",
+    rpc: "https://api.zan.top/node/v1/pharos/testnet/1761472bf26745488907477d23719fb5",
     privateKeys,
-    wethAddress: "0x4200000000000000000000000000000000000006",
+    wethAddress: "0x76aaada469d23216be5f7c596fa25f282ff9b364",
     mode,
     totalTx,
     delayMinutes,
